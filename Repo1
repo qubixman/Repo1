@@ -1,0 +1,98 @@
+package testcases;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class HelloWorld {
+
+	public static void main(String[] args) throws InterruptedException {
+			
+		// Google Chrome 
+		//System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver78\\chromedriver.exe");
+		//WebDriver driver = new ChromeDriver();
+		
+		// Mozilla Firefox
+		/*System.setProperty("webdriver.gecko.driver", "C:\\Webdriver\\geckodriver\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver(); */
+		
+		// Google
+		/*driver.get("https://google.pl/");
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Hello Webdriver");
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		//driver.close();
+		driver.quit(); */
+		
+		// YouTube
+		/*driver.get("https://www.youtube.com/");
+		driver.findElement(By.xpath("//input[@id='search']")).sendKeys("Tester oprogramowania");
+		driver.findElement(By.xpath("//input[@id='search']")).sendKeys(Keys.ENTER);
+		Thread.sleep(1000);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, 200);");
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit(); */
+		
+		// Wikipedia
+		/*driver.get("https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna");
+		driver.findElement(By.id("searchButton")).click();
+		driver.findElement(By.name("go")).click();
+		driver.findElement(By.className("searchButton")).click();
+		driver.findElement(By.xpath("//input[@id='searchButton']")).sendKeys(Keys.ENTER);
+		driver.findElement(By.cssSelector("#searchButton")).click();
+		driver.findElement(By.linkText("Losuj artykuł")).click();  // brak lineText w przycisku wyszukiwarki
+		driver.findElement(By.partialLinkText("Losuj artyk")).click(); // brak partialLineText w przycisku wyszukiwarki
+		driver.findElement(By.tagName("input type=\"submit\"")).click();
+		Thread.sleep(2000);
+		//driver.close();
+		driver.quit(); */
+		
+		// Demoqa
+		/*driver.get("https://demoqa.com/");
+		driver.findElement(By.linkText("Keyboard Events Sample Form")).click();
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("Name");
+		driver.findElement(By.xpath("//textarea[@id='currentAddress']")).sendKeys("Current Addres");
+		driver.findElement(By.xpath("//textarea[@id='permanentAddress']")).sendKeys("Permanent Adress");
+		driver.findElement(By.xpath("//input[@id='submit']")).sendKeys(Keys.ENTER); 
+		Alert alert = driver.switchTo().alert();
+		String tekst= driver.switchTo().alert().getText();
+		System.out.println(tekst);
+		alert.accept();
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit();  */
+		
+		// Gmail implicit wait
+		/*driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		driver.get("https://gmail.com");
+		driver.findElement(By.id("identifierId")).sendKeys("złyEmail");
+		driver.findElement(By.id("identifierNext")).click();
+		String tekst = driver.findElement(By.className("o6cuMc")).getText();
+		System.out.println(tekst);
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit(); */
+		
+		// Gmail explicit wait
+		
+		//WebDriverWait wait =new WebDriverWait(driver, 5);
+		/*driver.get("https://gmail.com");
+		driver.findElement(By.id("identifierId")).sendKeys("złyEmail");
+		driver.findElement(By.id("identifierNext")).click();
+		String alert = driver.findElement(By.className("o6cuMc")).getText();
+		System.out.println(alert);
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit();  */
+	}
+}
